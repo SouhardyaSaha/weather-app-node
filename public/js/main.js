@@ -8,7 +8,7 @@ const location_form = document.getElementById('location submission');
 document.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(location_form.value);
-    fetch(`http://localhost:3500/weather?location=${location_form.value}`).then((response) => {
+    fetch(`/weather?location=${location_form.value}`).then((response) => {
 
         response.json().then((data) => {
             document.getElementById('message-1').innerHTML = '';
